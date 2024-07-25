@@ -1,45 +1,105 @@
-let anExample = "this"
-let calculatedExample = 723 + 44 
-let templateLit = `Both ${anExample} but also ${calculatedExample} as a String`
-// ---------------------------variableDeclarations
+let num = 6;
+//(?) Write a conditional --> +  -
+if (num > 0) {
+  console.log(`${num} is positive`);
+} else if (num === 0) {
+  console.log(`${num} is zero. neutral`);
+} else {
+  console.log(`${num} is negative`);
+}
+// --If Else If Else
 
-
-
-const demo = () => {
-  let userInput = prompt(" Give me a number to add");
-  //   Get Users Input
-  if (userInput === "10") {
-    alert("Perfect 10 BRO");
+//(?) Nested If Else
+if (num % 2 === 0) {
+  console.log(`${num} is even.`);
+  if (num === 6) {
+    console.log("its 6! pick up sticks!");
   } else {
-    alert("Thats Just the way it goes.");
+    console.log("and its def not 6");
   }
-  console.log(userInput);
-};
-// Demo 1 _ IF Statement
+} else {
+  console.log(`${num} is odd.`);
+}
 
-const legalAgeFunc = () => {
-  let usersAge = prompt(" Enter Age");
-  let ageToDrive = 18;
-  let ageToDrink = 21;
-  let ageToRentCar = 25;
+// Switch Statements
 
-  if (usersAge >= ageToDrive && usersAge >= ageToDrink) {
-    console.log("Congrats! Come get your permit! and have a drink");
-  } else {
-    console.log("You are not of age.");
+let age = "20";
+
+switch (age) {
+  case 10:
+    console.log("I Love Spiderman");
+    break;
+  case 15:
+    console.log("I Love Fortnite");
+    break;
+  case 18:
+    console.log("I have my license");
+    break;
+  default:
+    console.log("Hmmm, i dont have any instructions for your age");
+    break;
+}
+
+// demoFunc
+const doTheThing = () => {
+  let input = prompt("Enter Your Age");
+  switch (input) {
+    case "16":
+      console.log("I Love Spiderman");
+      break;
+    case "15":
+      console.log("I Love Fortnite");
+      break;
+    case "18":
+      console.log("I have my license");
+      break;
+    default:
+      console.log("Hmmm, i dont have any instructions for your age");
+      break;
   }
 };
-// Demo 2 _ IF Statement MULTI Conditional
 
+const annesExample = (someNumber) => {
+  switch (someNumber) {
+    case "16":
+      console.log("I Love Spiderman");
+      break;
+    case "15":
+      console.log("I Love Fortnite");
+      break;
+    case "18":
+      console.log("I have my license");
+      break;
+    default:
+      console.log("Hmmm, i dont have any instructions for your age");
+      break;
+  }
+};
+annesExample("12");
+annesExample("18");
+annesExample("15");
 
-// Conditional Breakdown: 
-    // if(userInput === '10'){
-    //     alert("Perfect 10 BRO")
-    // }
-    // else{
-    //     alert("Thats Just the way it goes.")
-    // }
+// Ternary Operators
+// Syntax:  condtion ? trueStatement  : falseStatement
+num === 2 ? console.log("Num is 2") : console.log("Num is not 2");
+// condition  ? ifTrue                  :  ifFalse
 
-// =================if Statement: uses () to evaluate a stmnt to see if result = true.
-    // --> true : {}first code block executes
-    // --> false: {}else code block executes
+if (num === "3") {
+  console.log("TreBall!");
+} else {
+  throw "Error: If Its not 3, then it cannot Be!";
+}
+num === 3 ? console.log("TreBall!") : console.log("You Missed");
+// condtion
+
+// num > 1 ?  num + 15 : num - 10       [calculated ternary]
+
+try {
+    let jordan;
+    let chopped = jordan.split('')
+    console.log(chopped)
+} catch (error) {
+  // console.log(error)
+  // console.error(error)
+  throw "Our Own Error Can Be Declared Here.";
+}
